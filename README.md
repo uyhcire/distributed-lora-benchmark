@@ -22,6 +22,14 @@ terraform apply -var "public_key=$(cat $path_to_your_id_rsa_dot_pub_or_equivalen
 
 ## Run the benchmark
 
+First, wait 80 seconds or so for the instances to be ready.
+
+```bash
+$ sleep 80
+```
+
+Then, run the script that runs the benchmark:
+
 ```bash
 $ python run.py --ssh-privkey-path $path_to_your_id_rsa_or_equivalent --hf-auth-token $your_hf_auth_token
 ```
